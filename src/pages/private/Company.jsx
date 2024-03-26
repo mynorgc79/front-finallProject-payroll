@@ -6,7 +6,7 @@ export const Company = () => {
   return (
     <>
       <h1>Módulo Company (private)</h1>
-      <Link to='/dashboard'>Volver al Dashboard</Link>
+      <Link to='/register-company'>Volver al Dashboard</Link>
     </>
   )
 }

@@ -11,7 +11,7 @@ import {
   Dashboard,
   Company,
 } from '../pages/private'
-import { Login,Home, Uikit, Register, NotFound} from '../pages/public';
+import { Login,Home, Uikit, Register, NotFound, RegisterCompany} from '../pages/public';
 
 
 
@@ -22,6 +22,7 @@ const AppRouter = () => {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/register' element={<Register />} />
+      <Route path='/register-company' element={<RegisterCompany />} />
       <Route path='/uikit' element={<Uikit />} />
       <Route path='*' element={<NotFound />} />
       <Route path='/login' element={< Login/>}/>

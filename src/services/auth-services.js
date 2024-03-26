@@ -13,8 +13,8 @@ class AuthService{
     
     async login(email, password) {
         const loginData = {
-            email: email,
-            password: password
+            email,
+            password
         };
 
         try {
@@ -42,18 +42,20 @@ class AuthService{
     // authService.resetPassword('empresa2', 'empresa2', 3)
     // .then(res => console.log(res))
     // .catch(err => console.error(err))
+    // eslint-disable-next-line camelcase
     async resetPassword(password, confirm_password, id) {
         const data = {
-            password: password,
-            confirm_password: confirm_password
+            password,
+            // eslint-disable-next-line camelcase
+            confirm_password,
         };
         try {
             const response = await apiService.put({
                 url: '/reset-pass/:id/',
                 params: {
-                    'id': id,
+                    id,
                 },
-                data: data,
+                data,
             });
             sessionStorage.setItem('token', response.data.token)
 
@@ -72,13 +74,13 @@ class AuthService{
     }
       
     getMenu(role){
-        if(role == 'superadmin'){
+        if(role === 'superadmin'){
             return menuSuperAdmin;
         }
-        else if(role == 'admin'){
+        else if(role === 'admin'){
             return menuAdmin;
         }
-        else if(role == 'user'){
+        else if(role === 'user'){
             return menuUser;
         }
     }

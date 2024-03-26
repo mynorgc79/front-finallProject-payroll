@@ -22,6 +22,7 @@ class SessionService
     console.log('Nuevo estado de sessionStorage:', sessionStorage);
 
   }
+
   removeAll() {
     Object.keys(sessionStorage).forEach(key => {
       sessionStorage.removeItem(key);
