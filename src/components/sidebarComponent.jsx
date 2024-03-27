@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../style/style.css' // Asegúrate de importar los estilos CSS del Sidebar
 import Usuario from './Usuario'
 import { menuAdmin, menuSuperAdmin, menuUser } from '@/services/menu-service'
-import { Logout } from './logout'
+import { Logout } from '../components/Logout'
 import { Link } from 'react-router-dom'
 
 
