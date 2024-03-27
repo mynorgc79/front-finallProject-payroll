@@ -6,20 +6,20 @@ class SessionService
   set(clave, valor) {
     const valorString = JSON.stringify(valor);
     sessionStorage.setItem(clave, valorString);
-    console.log('Valor guardado.  "' + valorString);
+    // console.log('Valor guardado.  "' + valorString);
   }
 
   get(clave) {
     const valorString = sessionStorage.getItem(clave);
     const valorJSON = JSON.parse(valorString);
-    console.log('Valor recuperado de sessionStorage bajo la clave "' + clave + '"---- ' + valorJSON);
+    // console.log('Valor recuperado de sessionStorage bajo la clave "' + clave + '"---- ' + valorJSON);
     return valorJSON;
   }
 
   remove(clave) {
     sessionStorage.removeItem(clave);
-    console.log('Se ha eliminado el valor de sessionStorage bajo la clave "' + clave + '"' + sessionStorage);
-    console.log('Nuevo estado de sessionStorage:', sessionStorage);
+    // console.log('Se ha eliminado el valor de sessionStorage bajo la clave "' + clave + '"' + sessionStorage);
+    // console.log('Nuevo estado de sessionStorage:', sessionStorage);
 
   }
 
@@ -28,8 +28,8 @@ class SessionService
       sessionStorage.removeItem(key);
     });
 
-    console.log('Se han eliminado todas las claves de sessionStorage');
-    console.log('Nuevo estado de sessionStorage:', sessionStorage);
+    // console.log('Se han eliminado todas las claves de sessionStorage');
+    // console.log('Nuevo estado de sessionStorage:', sessionStorage);
   }
 
 }

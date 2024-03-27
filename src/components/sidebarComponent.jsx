@@ -27,18 +27,15 @@ const SidebarComponent = ({ menuType }) => {
 
   return (
     <div className='sidebar'>
-   
       <div className='user-info'>
         <Usuario />
       </div>
 
       <div className='menu'>
-     
         {menus.map((menu, index) => (
           <div key={index} className='menu-item'>
             {menu.name}
             <ul>
-         
               {menu.submenu.map((submenu, subIndex) => (
                 <li key={subIndex}>
                   <Link to={submenu.path}>{submenu.name}</Link>
@@ -48,6 +45,13 @@ const SidebarComponent = ({ menuType }) => {
           </div>
         ))}
       </div>
+
+      <button
+        onClick={Logout}
+        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
+      >
+        Cerrar sesión
+      </button>
     </div>
   )
 }
