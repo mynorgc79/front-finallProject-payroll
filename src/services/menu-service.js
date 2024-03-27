@@ -28,11 +28,15 @@ export const menuAdmin = [
     {
         name: 'company',
         icon: '',
+        
         submenu:[
             {
-                name: 'employees',
-                path: '/dashboard/employees',
+              
+
+                name: 'ver companias',
+                path: '/ver-companies',
                 icon: '',
+                
             }
         ]
     }

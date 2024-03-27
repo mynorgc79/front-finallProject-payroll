@@ -1,15 +1,25 @@
-import { Link } from 'react-router-dom';
-import { AuthNavigation } from '../../components/AuthNavigation';
+// En tu componente Dashboard.jsx
+import Usuario from '@/components/Usuario'
+import SidebarComponent from '@/components/sidebarComponent';
+import { menuSuperAdmin } from '@/services/menu-service';
+import React from 'react'
+import { VerCompanies } from '.';
 
 export const Dashboard = () => {
-  return (
-    <>
-    <AuthNavigation/>
-      <h1>Bienvenido al Dashboard (private)</h1>
+  
+  const menuType = 'admin' 
 
-      <Link to='/'>Volver al inicio</Link>
-    </>
+  return (
+    <div className='dashboard-container'>
+      <div style={{ display: 'flex' }}>
+        <div style={{ width: '200px', padding: '16px 24px' }}></div>
+        <SidebarComponent menuType={menuType} />
+        <div style={{ flex: '1', padding: '16px 24px' }}>
+          <VerCompanies />
+        </div>
+      </div>
+
+      <div className='main-content'></div>
+    </div>
   )
 }
-
-export default Dashboard;

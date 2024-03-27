@@ -10,42 +10,6 @@ import { authService } from '@/services/auth-services'
 
 
 
-// export const Login = () => {
-//   return (
-//     <>
-//       <div className='flex flex-col gap-2 p-2'>
-//         <Label htmlFor='email'>Email</Label>
-//         <Input 
-//         type='email' 
-//         id='email' 
-//         placeholder='ejemplo@gmail.com' />
-
-//         <b />
-//         <b />
-
-//         <Input 
-//         type='password' 
-//         placeholder='********' />
-
-//         <b />
-//         <b />
-//         <b />
-//         <div className='flex gap-2 items-center'>
-//           <Checkbox id='terms' />
-//           <Label htmlFor='terms'>payroll-plataform privacy & terms</Label>
-//         </div>
-//         <button
-//           type='submit'
-//           className='bg-gray-800 text-white font-bold py-2 px-4 rounded mt-6'
-//         >
-//           Ingresar
-//         </button>
-//       </div>
-//     </>
-//   )
-// }
-
-
 export const Login = () => {
   const navigate = useNavigate() // Hook para navegar a otras rutas
   const [formData, setFormData] = useState({
@@ -100,10 +64,6 @@ export const Login = () => {
         <b />
         <b />
         <b />
-        <div className='flex gap-2 items-center'>
-          <Checkbox id='terms' />
-          <Label htmlFor='terms'>payroll-plataform privacy & terms</Label>
-        </div>
         <button
           type='submit'
           onClick={handleSubmit}
@@ -112,7 +72,11 @@ export const Login = () => {
           Ingresar
         </button>
         {error && <p style={{ color: 'red' }}>{error}</p>}{' '}
-        {/* Muestra la alerta si hay un error */}
+
+        <div className='flex gap-2 items-center'>
+          <Checkbox id='terms' />
+          <Label htmlFor='terms'>payroll-plataform privacy & terms</Label>
+        </div>
       </div>
     </>
   )

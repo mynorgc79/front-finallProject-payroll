@@ -10,6 +10,7 @@ import {
   Store,
   Dashboard,
   Company,
+  VerCompanies
 } from '../pages/private'
 import { Login,Home, Uikit, Register, NotFound, RegisterCompany} from '../pages/public';
 
@@ -31,6 +32,7 @@ const AppRouter = () => {
 {/* ----------PRIVATE ROUTES-------- */}
       <Route path='/dashboard' element={<AuthRoute>< Dashboard/></AuthRoute>}/>
       <Route path='/profile' element={<AuthRoute><Profile /></AuthRoute>}/>
+      <Route path='/ver-companies' element={<AuthRoute><VerCompanies /></AuthRoute>}/>
       <Route path='/company' element={<AuthRoute>< Company/></AuthRoute>}/>
       <Route path='/employee' element={<AuthRoute><Employee /></AuthRoute>}/>
       <Route path='/Payroll' element={<AuthRoute> <Payroll/> </AuthRoute>}/>
