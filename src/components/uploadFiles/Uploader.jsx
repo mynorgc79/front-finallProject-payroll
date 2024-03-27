@@ -16,7 +16,7 @@ function Uploader({ acceptedTypes, errorMessage, successMessage, handleFileName 
         return;
       }
 
-       //llamada de metodo ToolService
+       // llamada de metodo ToolService
       const fileName = ToolService.formatFilename(handleFileName(file.name)); 
       if (!acceptedTypes.test(fileName)) {
         setError(errorMessage);

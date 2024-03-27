@@ -3,7 +3,7 @@ import Uploader from "./Uploader";
 
 function ImgUploader() {
 
-  //funcion para obtener nombre
+  // funcion para obtener nombre
   const handleFileName = (fileName) => {
     return fileName;
   };
