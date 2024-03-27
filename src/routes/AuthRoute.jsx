@@ -3,7 +3,7 @@
 import React, { useEffect, useContext } from 'react'
 import {  useNavigate } from "react-router-dom"; 
 import { AuthContext } from "../auth/provider/AuthContext";
-import simulateAuthentication from "../pages/private/simulateAuthentication";
+import sessionService from '@/services/session-service';
 
 
 
@@ -12,11 +12,11 @@ export const AuthRoute = props => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!userInfo) {
-      // Si el usuario no está autenticado, simula la autenticación
-      simulateAuthentication(setUserInfo, navigate)
+    const token = sessionService.get('token')
+    if (!token) {
+      navigate('/login');
     }
-  }, []);
+  }, [navigate]);
 
 
   return <>{props.children}</>
