@@ -40,7 +40,7 @@ export const menuAdmin = [
 
 export const menuUser = [
     {
-        name: 'inicio',
+        name: 'dashboard',
         icon: '',
         submenu:[
             {
