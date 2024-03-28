@@ -46,12 +46,10 @@ const SidebarComponent = ({ menuType }) => {
         ))}
       </div>
 
-      <button
-        onClick={Logout}
-        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
-      >
-        Cerrar sesión
-      </button>
+      <div>
+        {/* Otras partes del sidebar */}
+        <Logout/>
+      </div>
     </div>
   )
 }
